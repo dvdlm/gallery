@@ -1,7 +1,33 @@
-html, body {
-  margin: 0;
-  padding: 0;
+body {
+  text-align: center;
+  margin: auto;
+  padding: 10px;
 }
+
 canvas {
+  margin-left: auto;
+  margin-right: auto;
   display: block;
+}
+
+#flexbox {
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  margin:auto;
+  width: auto;
+}
+
+.flex {
+  flex-basis: 400px;
+  margin: 20px;
+}
+
+img {
+  display: block;
+  max-width:100%;
+  object-fit: contain;
 }

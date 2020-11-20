@@ -12,7 +12,8 @@ let x, y, t, t_0 = 0,
 let flag = 0;
 
 function setup() {
-  createCanvas(xlim, ylim);
+  var canvas = createCanvas(xlim, ylim);
+  canvas.parent('sketch-holder');
 }
 
 function draw() {
