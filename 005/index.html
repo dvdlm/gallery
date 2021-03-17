@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>wave dance</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <script src="./wavedance.js"></script>
+    <div id="sketch-holder"></div>
+    <h1>wave dance</h1>
+    <p>"circles are made from sinusoidal waves"... wrong answers only</p>
+	<p>hover your mouse to shift the waves! </p>
+	<br>
+    <p style="font-style: italic;max-width: 45em">dev notes: <br> an interesting glitch: for smooth motion, the actual wave position moves smoothly towards the target position (at your mouse). however, the mouse can move from PI to -PI when the mouse moves over the left side of the circle. smooth motion across this divide therefore tries to move "smoothly" between PI and -PI, but the path it takes is through the other direction. I can't figure out how to allow the angle to smoothly move through the overflow that comes so naturally to the angle-based system. Perhaps i need to make a coordinate system in an inherently infinite looping system then translate it to this polar (2 pi cycled angle based) system.</p>
+</html>

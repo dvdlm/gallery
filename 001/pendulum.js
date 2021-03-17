@@ -2,11 +2,12 @@ let xlim = 400
 let ylim = 400
 let x_0 = xlim / 2;
 let y_0 = ylim / 20;
+let clr;
 
 let m = 10;
 
 let x, y, t, t_0 = 0,
-  theta, theta_0 = 0.2,
+  theta, theta_0,
   l = 300,
   w_n;
 let flag = 0;
@@ -14,10 +15,15 @@ let flag = 0;
 function setup() {
   var canvas = createCanvas(xlim, ylim);
   canvas.parent('sketch-holder');
+  colorMode(HSB);
+  clr=random(255);
+  theta_0=random(2)-1;
 }
 
 function draw() {
-  background(220);
+  background(20);
+  fill(clr,30,100);
+  stroke(clr,30,100);
 
   if (flag == 1) {
     x += (mouseX-x)*0.2;
@@ -26,7 +32,7 @@ function draw() {
     l = sqrt((x - x_0) ** 2 + (y - y_0) ** 2)
 
     theta_0 = atan((x - x_0) / (y - y_0))
-    fill(0)
+    fill(clr,60,100);
     t_0 = millis()
   }
 
@@ -37,8 +43,8 @@ function draw() {
   y = y_0 + l * cos(theta);
 
 
-
-  line(x_0, y_0, x, y)
+  
+  line(x_0, y_0, x, y);
   ellipse(x, y, m, m)
 }
 
@@ -50,5 +56,5 @@ function mouseDragged() {
 
   function mouseClicked() {
     flag = 0;
-    fill(255)
+    fill(clr,60,100);
   }
