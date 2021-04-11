@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>luna</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+	<script src="../libs/post5.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <script src="./luna.js"></script>
+    <div style="display:flex;justify-content:center;">
+		<div id="sketch-holder"></div>
+		<div style="flex-basis:400px"></div>
+	</div>
+    <h1 style="margin-top:450px">luna</h1>
+    <p>move your mouse - raise the moon</p>
+	<p>the stars shimmer. appropriate music (40 winks - sgap):</p>
+	<audio id="player" controls="" src="https://sogreatandpowerful.com/40 Winks.ogg">
+		Sorry, your browser doesn't support html5 audio playing of ogg files.<br>
+		Please download any songs you wish to listen to.
+	</audio>
+	<br> <br> <br> <br>
+	<button title="dev notes" type="button" onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}">dev notes</button>
+
+	<div id="spoiler" style="display:none">
+	<p>the mountains are generated with perlin noise to keep a continuous but random flow. the stars shimmer in the background with perlin noise too. i tried to hardcode the godrays but this shader (post5) did a spectacular job - i still feel a little bummered that i couldn't do it myself</p>
+	<p><em>edit: this shader is awful, it stronghands the rendering making it impossible to keep a nice page layout. the fact that this page doesn't look out of the normal was not easy. please don't ctrl U</em></p>
+	</div>
+</html>
